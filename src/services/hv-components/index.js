@@ -17,6 +17,7 @@ import HvSelectSingle from 'hyperview/src/components/hv-select-single';
 import HvSpinner from 'hyperview/src/components/hv-spinner';
 import HvTextArea from 'hyperview/src/components/hv-text-area';
 import HvTextField from 'hyperview/src/components/hv-text-field';
+import VisibilityDetectingView from 'hyperview/src/components/visibility-detecting-view';
 
 const HYPERVIEW_COMPONENTS = [
   HvList,
@@ -42,3 +43,5 @@ export const getRegistry = (
     }),
     {},
   );
+
+export { VisibilityDetectingView };

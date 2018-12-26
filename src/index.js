@@ -6,7 +6,7 @@
  *
  */
 
-import * as Components from 'hyperview/src/services/components';
+import * as HvComponents from 'hyperview/src/services/components';
 import * as Namespaces from 'hyperview/src/services/namespaces';
 import * as Render from 'hyperview/src/services/render';
 import * as Stylesheets from 'hyperview/src/services/stylesheets';
@@ -25,7 +25,6 @@ import {
 import { DOMParser } from 'xmldom';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview';
 import React from 'react';
-import VisibilityDetectingView from './VisibilityDetectingView.js';
 import { createProps, getFirstTag } from 'hyperview/src/services';
 import { version } from '../package.json';
 import urlParse from 'url-parse';
@@ -63,7 +62,7 @@ function getHyperviewHeaders() {
  */
 
 
- 
+
 /**
  * Component that handles dispatching behaviors based on the appropriate
  * triggers.
@@ -503,7 +502,7 @@ export default class HyperScreen extends React.Component {
     this.shallowCloneToRoot = this.shallowCloneToRoot.bind(this);
     this.reload = this.reload.bind(this);
 
-    this.componentRegistry = Components.getRegistry(this.props.components);
+    this.componentRegistry = HvComponents.getRegistry(this.props.components);
   }
 
   componentDidMount() {
